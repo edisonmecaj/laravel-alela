@@ -1,0 +1,83 @@
+ul.mainlist{
+	cursor: pointer;
+	padding: 0px;
+	border-radius: 5px;
+}
+
+ul.mainlist li{
+	padding: 10px;
+	margin: 5px;
+	box-shadow: 0 0 2px #333;
+	display: block;
+	background-color: #eee;
+	border-radius: 5px;
+}
+
+.x_content{
+	padding: 5px;
+}
+
+body.dragging, body.dragging * {
+	cursor: move !important;
+  }
+  
+  .dragged {
+	position: absolute;
+	opacity: 0.5;
+	z-index: 2000;
+  }
+  
+  ol.example li.placeholder {
+	position: relative;
+	/** More li styles **/
+  }
+  ol.example li.placeholder:before {
+	position: absolute;
+	/** Define arrowhead **/
+	}
+	
+	.wp100{
+		width: 100%;
+	}
+
+	.wh100{
+		height: 60%;
+	}
+
+	.active.active-danger, .active.active-danger:hover{
+		background-color: #d9534f;
+		color: white;
+	}
+
+	li .btn-block+.btn-block{
+		margin-top: 0;
+	}
+
+	#main_menu_edit li{
+		margin: 10px 0;
+		list-style-type: none;
+	}
+
+	body.dragging .placeholder{
+		border: 3px dashed #aaa;
+  	height: 45px;
+		background: #eee;
+		margin: 10px 0;
+	}
+
+	body.dragging .placeholder:after{
+		position: relative;
+		top: 10px;
+		left: 50px;
+		content: 'Place menu here...';
+		color: #333;
+	}
+
+	.btn-bordered{
+		border: 1px solid #aaa;
+	}
+
+	.selectize-input, .selectize-input.dropdown-active{
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
