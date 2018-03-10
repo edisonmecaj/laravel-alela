@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Make;
+use App\Category;
 use Illuminate\Database\Eloquent\Model as LaravelModel;
 
 class Model extends LaravelModel
