@@ -5,8 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
-class CreateCategories extends Migration
+class CreateCategoryRole extends Migration
 {
     use SoftDeletes;
     /**
@@ -16,11 +15,13 @@ class CreateCategories extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('category_role', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("name");
+            $table->integer("category_id")->unsigned();
+            $table->foreign("category_id")->references("id")->on("categories");
+            $table->integer("roles_id")->unsigned();
+            $table->foreign("roles_id")->references("id")->on("roles");
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -31,6 +32,6 @@ class CreateCategories extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('category_role');
     }
 }
