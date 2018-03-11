@@ -36,8 +36,10 @@ class CategoryController extends Controller
 
     public function delete(Category $cat){
         $title = "Delete Category";
-        $question = "Do you want to delete the Category ".$cat->name."?";
-        return view("forms.delete", compact("cat", "title", "question"));
+        $id = $role->id;
+        $return = "categories";
+        $message = "Do you want to delete the Category ".$cat->name."?";
+        return view("layouts.delete", compact("id", "title", "message"));
     }
 
     public function destroy(Request $req){

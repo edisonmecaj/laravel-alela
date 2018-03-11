@@ -6,6 +6,7 @@
 @parent
 <div class="row">
 	<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+		<a href="{{ url('roles/add') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Add new Role</a>
 		<table class="table table-striped table-fixed table-centered">
 			<thead>
 				<tr>
