@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Make;
 use Illuminate\Http\Request;
 use App\Http\Requests\MakeRequest;
 
@@ -12,12 +13,12 @@ class MakeController extends Controller
         $name = "Make";
         $route = "makes";
         $title = "Makes List";
-        return view("lists.simple", compact("list", "title", "name", "route"));
+        return view("makes.index", compact("list"));
     }
 
     public function add(){
         $title = "Add new Make";
-        return view("forms.simple.edit", compact("title"));
+        return view("makes.edit", compact("title"));
     }
 
     public function create(MakeRequest $req){
@@ -27,7 +28,7 @@ class MakeController extends Controller
 
     public function edit(Make $make){
         $title = "Edit Make: ".$make->name;
-        return view("forms.simple.edit", compact("make", "title"));
+        return view("makes.edit", compact(["item" => $make, "title" => $title]));
     }
 
     public function update(Make $make, MakeRequest $req){
@@ -38,7 +39,7 @@ class MakeController extends Controller
     public function delete(Make $make){
         $title = "Delete Make";
         $question = "Do you want to delete the Make ".$make->name."?";
-        return view("forms.delete", compact("make", "title", "question"));
+        return view("layouts.delete", compact("make", "title", "question"));
     }
 
     public function destroy(Request $req){

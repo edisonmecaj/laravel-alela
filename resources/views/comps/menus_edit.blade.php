@@ -3,13 +3,13 @@
 		<li menu-id="{{$m->id}}">
 			<div class="btn btn-primary btn-block">
 				<div class="row">
-					<div class="col-xs-1 move-btn" data-toggle="collapse" data-target="#menu_edit_{{$m->id}}" >
+					<div class="col-xs-1 move-btn">
 						<i class="fas fa-arrows-alt"></i>
 					</div>
 					<div class="col-xs-7 text-left menu-title">
 						{{ $m->label }}
 					</div>
-					<div class="col-xs-4 text-right">
+					<div class="col-xs-4 text-right" data-toggle="collapse" data-target="#menu_edit_{{$m->id}}" >
 						<span class="fa fa-edit"></span>
 					</div>
 				</div>
