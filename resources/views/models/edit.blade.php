@@ -1,4 +1,4 @@
-@extends('layouts.default', ["title" => "Add new Model"])
+@extends('layouts.default', ["title" => $title])
 @section('styles')
 
 @endsection
@@ -6,14 +6,14 @@
 @parent
 <div class="row">
 	<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4">
-		{!! Form::model($make) !!}
+		{!! Form::model($model) !!}
 		<div class="form-group">
 			{!! Form::label("name", "Make Name") !!}
 			{!! Form::text("name", null, ["class" => "form-control", "autocomplete" => "off"]) !!}
 		</div>
 		<div class="form-group">
-			{!! Form::label("category_id", "Category") !!}
-			{!! Form::select("category_id", \App\Category::pluck("name", "id"), null, ["class" => "form-control", "autocomplete" => "off"]) !!}
+			{!! Form::label("make_id", "Make") !!}
+			{!! Form::select("make_id", \App\Make::pluck("name", "id"), null, ["class" => "form-control", "autocomplete" => "off"]) !!}
 		</div>
 		<div class="form-group">
 			<div class="row">

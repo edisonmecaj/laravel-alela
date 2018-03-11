@@ -1,4 +1,4 @@
-@extends('layouts.default', ["title" => "Add new Category"])
+@extends('layouts.default', ["title" => $title])
 @section('styles')
 
 @endsection
@@ -6,7 +6,7 @@
 @parent
 <div class="row">
 	<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4">
-		{!! Form::model($model) !!}
+		{!! Form::model($cat) !!}
 		<div class="form-group">
 			{!! Form::label("name", "Category Name") !!}
 			{!! Form::text("name", null, ["class" => "form-control", "autocomplete" => "off"]) !!}

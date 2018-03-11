@@ -76,6 +76,14 @@ body.dragging .placeholder:after {
 	color: #333;
 }
 
+body.dragging .table-placeholder{
+	height: 40px;
+}
+
+body.dragging .table-placeholder td{
+	background-color: #EBF5FB;
+}
+
 .btn-bordered {
 	border: 1px solid #aaa;
 }

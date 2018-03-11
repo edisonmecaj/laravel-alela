@@ -59,3 +59,24 @@ Route::middleware(["auth", "dev"])->prefix("makes")->group(function(){
     Route::get("/{make}/delete", "MakeController@delete");
     Route::post("/{make}/delete", "MakeController@destroy");
 });
+
+Route::middleware(["auth", "dev"])->prefix("models")->group(function(){
+    Route::get("/", "ModelController@index");
+    Route::get("/add", "ModelController@add");
+    Route::post("/add", "ModelController@create");
+    Route::get("/{model}/edit", "ModelController@edit");
+    Route::post("/{model}/edit", "ModelController@update");
+    Route::get("/{model}/delete", "ModelController@delete");
+    Route::post("/{model}/delete", "ModelController@destroy");
+});
+
+Route::middleware(["auth", "dev"])->prefix("attributes")->group(function(){
+    Route::get("/", "AttributeController@index");
+    Route::get("/add", "AttributeController@add");
+    Route::post("/add", "AttributeController@create");
+    Route::post("/sort", "AttributeController@updateSort");
+    Route::get("/{attr}/edit", "AttributeController@edit");
+    Route::post("/{attr}/edit", "AttributeController@update");
+    Route::get("/{attr}/delete", "AttributeController@delete");
+    Route::post("/{attr}/delete", "AttributeController@destroy");
+});

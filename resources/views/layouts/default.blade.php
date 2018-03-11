@@ -14,6 +14,13 @@
 	@yield('styles')
 	{{ Html::style('css/custom.css') }}
 	<title>{{ config('app.name', 'Laravel') }} {{ isset($title) ? " | ".$title : "" }}</title>
+	
+	<script src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+	<script src="{{ asset('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('vendors/fastclick/lib/fastclick.js') }}"></script>
+	<script src="{{ asset('vendors/nprogress/nprogress.js') }}"></script>
+	<script src="{{ asset('vendors/sortable/jquery-sortable.js') }}"></script>
+	{{--  <script src="{{ asset('vendors/switchery/dist/switchery.min.js') }}"></script>  --}}
 </head>
 <body class="nav-md" cz-shortcut-listen="true">
 	<div class="container body">
@@ -55,12 +62,6 @@
 			</footer>
 		</div>
 	</div>
-	<script src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
-	<script src="{{ asset('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-	<script src="{{ asset('vendors/fastclick/lib/fastclick.js') }}"></script>
-	<script src="{{ asset('vendors/nprogress/nprogress.js') }}"></script>
-	<script src="{{ asset('vendors/sortable/jquery-sortable.js') }}"></script>
-	<script src="{{ asset('vendors/switchery/dist/switchery.min.js') }}"></script>
 	<script src="{{ asset('js/ajax.js') }}"></script>
 	<script src="{{ asset('js/alela.min.js') }}"></script>
 	@yield('scripts')
