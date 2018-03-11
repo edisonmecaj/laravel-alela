@@ -29,3 +29,24 @@ Route::middleware(["auth"])->prefix("profile")->group(function(){
     Route::get("/", "UserController@index");
     Route::post("/", "UserController@update");
 });
+
+
+Route::middleware(["auth", "dev"])->prefix("categories")->group(function(){
+    Route::get("/", "CategoryController@index");
+    Route::get("/add", "CategoryController@add");
+    Route::post("/add", "CategoryController@create");
+    Route::get("/{cat}/edit", "CategoryController@edit");
+    Route::post("/{cat}/edit", "CategoryController@update");
+    Route::get("/{cat}/delete", "CategoryController@delete");
+    Route::post("/{cat}/delete", "CategoryController@destroy");
+});
+
+Route::middleware(["auth", "dev"])->prefix("roles")->group(function(){
+    Route::get("/", "RoleController@index");
+    Route::get("/add", "RoleController@add");
+    Route::post("/add", "RoleController@create");
+    Route::get("/{role}/edit", "RoleController@edit");
+    Route::post("/{role}/edit", "RoleController@update");
+    Route::get("/{role}/delete", "RoleController@delete");
+    Route::post("/{role}/delete", "RoleController@destroy");
+});

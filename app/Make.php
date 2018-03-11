@@ -2,7 +2,6 @@
 
 namespace App;
 
-use App\Category;
 use Illuminate\Database\Eloquent\Model;
 
 class Make extends Model
