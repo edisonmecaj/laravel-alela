@@ -13,4 +13,18 @@ class Make extends Model
     public function Models(){
         return $this->hasMany(Model::class);
     }
+
+
+    //mutators
+    public function getAddBtnAttribute(){
+        return "<a href=\"".url('makes/add')."\" class=\"btn btn-primary\"><i class=\"fas fa-plus\"></i> Add new Make</a>";
+    }
+
+    public function getEditBtnAttribute(){
+        return "<a href=\"".url('makes/'.$this->id.'/edit')."\" class=\"btn btn-primary btn-xs\"><i class=\"far fa-edit\"></i> Edit</a>";
+    }
+
+    public function getDeleteBtnAttribute(){
+        return "<a href=\"".url('makes/'.$this->id.'/delete')."\" class=\"btn btn-danger btn-xs\"><i class=\"far fa-trash-alt\"></i> Edit</a>";
+    }
 }

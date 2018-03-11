@@ -9,9 +9,9 @@ use App\Http\Requests\CategoryRequest;
 class CategoryController extends Controller
 {
     public function index(){
-        $cats = Category::all();
+        $list = Category::all();
         $title = "Categories List";
-        return view("lists.simple", compact("cats", "title"));
+        return view("lists.simple", compact("list", "title", "name", "route"));
     }
 
     public function add(){

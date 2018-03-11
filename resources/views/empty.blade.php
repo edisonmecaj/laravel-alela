@@ -5,7 +5,7 @@
 @section('content')
 @parent
 <div class="row">
-	<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+	<div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3">
 		
 	</div>
 </div>
