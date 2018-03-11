@@ -33,6 +33,10 @@
 					</div>					
 				</div>
 				<div class="form-group">
+					{!! Form::label("dynamic_items", "Dynamically Generated Childs") !!}
+					{!! Form::text("dynamic_items", null, ["class" => "form-control", "autocomplete" => "off", "placeholder" => "Model:label.sort"]) !!}
+				</div>
+				<div class="form-group">
 					{!! Form::label("roles") !!}
 					{!! Form::select("roles[]", \App\Role::orderBy("level", "desc")->pluck("label", "id"), null, ["class" => "form-control selectize", "autocomplete" => "off", "multiple" => "true"]) !!}
 				</div>
