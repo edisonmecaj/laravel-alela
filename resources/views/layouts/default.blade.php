@@ -7,7 +7,7 @@
 	{{ Html::style('vendors/bootstrap/dist/css/bootstrap.min.css') }}
 	{{ Html::style('vendors/icomoon/style.css') }}
 	{{--  {{ Html::style('vendors/font-awesome/css/font-awesome.min.css') }}  --}}
-	<link rel="shortcut icon" href="{{{ asset('images/logo.png') }}}">
+	<link rel="shortcut icon" href="{{{ asset('storage/images/logo.png') }}}">
 	{{ Html::style('vendors/fa5/css/fontawesome-all.min.css')}}
 	{{ Html::style('vendors/nprogress/nprogress.css') }}
 	{{ Html::style('css/alela.min.css') }}
