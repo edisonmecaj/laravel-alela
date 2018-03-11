@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model
 {
+    use SoftDeletes;
+    protected $fillable = ["name"];
+
     public function Makes(){
         return $this->hasMany(Make::class);
     }
@@ -16,6 +20,6 @@ class Category extends Model
     }
 
     public function getDeleteBtnAttribute(){
-        return "<a href=\"".url('categories/'.$this->id.'/delete')."\" class=\"btn btn-danger btn-xs\"><i class=\"far fa-trash-alt\"></i> Edit</a>";
+        return "<a href=\"".url('categories/'.$this->id.'/delete')."\" class=\"btn btn-danger btn-xs\"><i class=\"far fa-trash-alt\"></i> Delete</a>";
     }
 }

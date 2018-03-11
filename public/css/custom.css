@@ -1,10 +1,10 @@
-ul.mainlist{
+ul.mainlist {
 	cursor: pointer;
 	padding: 0px;
 	border-radius: 5px;
 }
 
-ul.mainlist li{
+ul.mainlist li {
 	padding: 10px;
 	margin: 5px;
 	box-shadow: 0 0 2px #333;
@@ -13,71 +13,79 @@ ul.mainlist li{
 	border-radius: 5px;
 }
 
-.x_content{
+.x_content {
 	padding: 5px;
 }
 
-body.dragging, body.dragging * {
+body.dragging,
+body.dragging * {
 	cursor: move !important;
-  }
-  
-  .dragged {
+}
+
+.dragged {
 	position: absolute;
 	opacity: 0.5;
 	z-index: 2000;
-  }
-  
-  ol.example li.placeholder {
+}
+
+ol.example li.placeholder {
 	position: relative;
 	/** More li styles **/
-  }
-  ol.example li.placeholder:before {
+}
+
+ol.example li.placeholder:before {
 	position: absolute;
 	/** Define arrowhead **/
-	}
-	
-	.wp100{
-		width: 100%;
-	}
+}
 
-	.wh100{
-		height: 60%;
-	}
+.wp100 {
+	width: 100%;
+}
 
-	.active.active-danger, .active.active-danger:hover{
-		background-color: #d9534f;
-		color: white;
-	}
+.wh100 {
+	height: 60%;
+}
 
-	li .btn-block+.btn-block{
-		margin-top: 0;
-	}
+.active.active-danger,
+.active.active-danger:hover {
+	background-color: #d9534f;
+	color: white;
+}
 
-	#main_menu_edit li{
-		margin: 10px 0;
-		list-style-type: none;
-	}
+li .btn-block+.btn-block {
+	margin-top: 0;
+}
 
-	body.dragging .placeholder{
-		border: 3px dashed #aaa;
-  	height: 45px;
-		background: #eee;
-		margin: 10px 0;
-	}
+#main_menu_edit li {
+	margin: 10px 0;
+	list-style-type: none;
+}
 
-	body.dragging .placeholder:after{
-		position: relative;
-		top: 10px;
-		left: 50px;
-		content: 'Place menu here...';
-		color: #333;
-	}
+body.dragging .placeholder {
+	border: 3px dashed #aaa;
+	height: 45px;
+	background: #eee;
+	margin: 10px 0;
+}
 
-	.btn-bordered{
-		border: 1px solid #aaa;
-	}
+body.dragging .placeholder:after {
+	position: relative;
+	top: 10px;
+	left: 50px;
+	content: 'Place menu here...';
+	color: #333;
+}
 
-	.selectize-input, .selectize-input.dropdown-active{
-		-webkit-border-radius: 0px;
-		border-radius: 0px;
-	}
+.btn-bordered {
+	border: 1px solid #aaa;
+}
+
+.selectize-input,
+.selectize-input.dropdown-active {
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.table-fixed{
+	table-layout: fixed;
+}

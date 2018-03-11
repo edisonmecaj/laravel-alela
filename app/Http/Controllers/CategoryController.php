@@ -13,12 +13,13 @@ class CategoryController extends Controller
         $name = "Category";
         $route = "categories";
         $title = "Categories List";
-        return view("lists.simple", compact("list", "title", "name", "route"));
+        return view("categories.index", compact("list", "title", "name", "route"));
     }
 
     public function add(){
         $title = "Add new Category";
-        return view("forms.simple.edit", compact("title"));
+        $cat = new Category;
+        return view("categories.edit", compact("cat", "title"));
     }
 
     public function create(CategoryRequest $req){
@@ -28,7 +29,7 @@ class CategoryController extends Controller
 
     public function edit(Category $cat){
         $title = "Edit Category: ".$cat->name;
-        return view("forms.simple.edit", compact("cat", "title"));
+        return view("categories.edit", compact("cat", "title"));
     }
 
     public function update(Category $cat, CategoryRequest $req){
@@ -38,10 +39,10 @@ class CategoryController extends Controller
 
     public function delete(Category $cat){
         $title = "Delete Category";
-        $id = $role->id;
+        $id = $cat->id;
         $return = "categories";
         $message = "Do you want to delete the Category ".$cat->name."?";
-        return view("layouts.delete", compact("id", "title", "message"));
+        return view("layouts.delete", compact("id", "title", "message", "return"));
     }
 
     public function destroy(Request $req){

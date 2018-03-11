@@ -1,4 +1,4 @@
-@extends('layouts.default', ["title" => "Makes List"])
+@extends('layouts.default', ["title" => "Models List"])
 @section('styles')
 
 @endsection

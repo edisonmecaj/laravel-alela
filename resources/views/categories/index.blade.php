@@ -1,4 +1,4 @@
-@extends('layouts.default', ["title" => $title])
+@extends('layouts.default', ["title" => "Categories List"])
 @section('styles')
 
 @endsection
@@ -11,6 +11,7 @@
 			<thead>
 				<tr>
 					<th>Name</th>
+					<th>Makes</th>
 					<th>Actions</th>
 				</tr>
 			</thead>
@@ -18,6 +19,7 @@
 				@foreach ($list as $item)
 					<tr>
 						<td>{{ $item->name }}</td>
+						<td>{{ $item->Makes()->count() }}</td>
 						<td>
 							{!! $item->edit_btn !!}
 							{!! $item->delete_btn !!}

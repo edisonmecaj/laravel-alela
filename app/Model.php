@@ -2,14 +2,18 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model as LaravelModel;
 
 class Model extends LaravelModel
 {
+    use SoftDeletes;
+    
+    protected $fillable = ["name", "make_id"];
+
     public function Category(){
         return $this->belongsTo(Make::class)->Category;
     }
-
 
     //mutators
     public function getEditBtnAttribute(){
@@ -17,6 +21,6 @@ class Model extends LaravelModel
     }
 
     public function getDeleteBtnAttribute(){
-        return "<a href=\"".url('models/'.$this->id.'/delete')."\" class=\"btn btn-danger btn-xs\"><i class=\"far fa-trash-alt\"></i> Edit</a>";
+        return "<a href=\"".url('models/'.$this->id.'/delete')."\" class=\"btn btn-danger btn-xs\"><i class=\"far fa-trash-alt\"></i> Delete</a>";
     }
 }

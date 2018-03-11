@@ -2,10 +2,16 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model as LaravelModel;
 
-class Make extends Model
+class Make extends LaravelModel
 {
+    use SoftDeletes;
+    
+    protected $fillable = ["name", "category_id"];
+
     public function Category(){
         return $this->belongsTo(Category::class);
     }
@@ -21,6 +27,6 @@ class Make extends Model
     }
 
     public function getDeleteBtnAttribute(){
-        return "<a href=\"".url('makes/'.$this->id.'/delete')."\" class=\"btn btn-danger btn-xs\"><i class=\"far fa-trash-alt\"></i> Edit</a>";
+        return "<a href=\"".url('makes/'.$this->id.'/delete')."\" class=\"btn btn-danger btn-xs\"><i class=\"far fa-trash-alt\"></i> Delete</a>";
     }
 }

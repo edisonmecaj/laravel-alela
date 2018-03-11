@@ -54,8 +54,8 @@ Route::middleware(["auth", "dev"])->prefix("makes")->group(function(){
     Route::get("/", "MakeController@index");
     Route::get("/add", "MakeController@add");
     Route::post("/add", "MakeController@create");
-    Route::get("/{cat}/edit", "MakeController@edit");
-    Route::post("/{cat}/edit", "MakeController@update");
-    Route::get("/{cat}/delete", "MakeController@delete");
-    Route::post("/{cat}/delete", "MakeController@destroy");
+    Route::get("/{make}/edit", "MakeController@edit");
+    Route::post("/{make}/edit", "MakeController@update");
+    Route::get("/{make}/delete", "MakeController@delete");
+    Route::post("/{make}/delete", "MakeController@destroy");
 });
