@@ -8,9 +8,11 @@ use App\Http\Requests\MakeRequest;
 class MakeController extends Controller
 {
     public function index(){
-        $makes = Make::all();
+        $list = Make::all();
+        $name = "Make";
+        $route = "makes";
         $title = "Makes List";
-        return view("lists.simple", compact("makes", "title"));
+        return view("lists.simple", compact("list", "title", "name", "route"));
     }
 
     public function add(){

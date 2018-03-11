@@ -26,6 +26,7 @@
 	<script src="{{ asset("vendors/selectize/selectize.js") }}"></script>
 	<script>
 		$("#main_menu_edit").sortable({
+			handle: '.move-btn',
 			onDrop: function  ($item, container, _super) {
 				$("input[name='json']").val(json());
 				_super($item, container);

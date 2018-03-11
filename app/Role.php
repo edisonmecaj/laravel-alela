@@ -20,10 +20,6 @@ class Role extends Model
 
 
     //mutators
-    public static function getAddBtnAttribute(){
-        return "<a href=\"".url('roles/add')."\" class=\"btn btn-primary\"><i class=\"fas fa-plus\"></i> Add new Role</a>";
-    }
-
     public function getEditBtnAttribute(){
         return "<a href=\"".url('roles/'.$this->id.'/edit')."\" class=\"btn btn-primary btn-xs\"><i class=\"far fa-edit\"></i> Edit</a>";
     }

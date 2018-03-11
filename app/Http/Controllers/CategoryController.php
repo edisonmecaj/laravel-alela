@@ -10,6 +10,8 @@ class CategoryController extends Controller
 {
     public function index(){
         $list = Category::all();
+        $name = "Category";
+        $route = "categories";
         $title = "Categories List";
         return view("lists.simple", compact("list", "title", "name", "route"));
     }

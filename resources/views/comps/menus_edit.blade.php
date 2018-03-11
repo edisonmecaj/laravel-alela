@@ -1,9 +1,12 @@
 <ul @isset($id) id="{{$id}}" @endisset>
 	@foreach ($menus as $m)
 		<li menu-id="{{$m->id}}">
-			<div data-toggle="collapse" data-target="#menu_edit_{{$m->id}}" class="btn btn-primary btn-block">
+			<div class="btn btn-primary btn-block">
 				<div class="row">
-					<div class="col-xs-8 text-left menu-title">
+					<div class="col-xs-1 move-btn" data-toggle="collapse" data-target="#menu_edit_{{$m->id}}" >
+						<i class="fas fa-arrows-alt"></i>
+					</div>
+					<div class="col-xs-7 text-left menu-title">
 						{{ $m->label }}
 					</div>
 					<div class="col-xs-4 text-right">

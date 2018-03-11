@@ -10,11 +10,7 @@ class Category extends Model
         return $this->hasMany(Make::class);
     }
 
-    //mutators
-    public static function getAddBtnAttribute(){
-        return "<a href=\"".url('makes/add')."\" class=\"btn btn-primary\"><i class=\"fas fa-plus\"></i> Add new Category</a>";
-    }
-    
+    //mutators    
     public function getEditBtnAttribute(){
         return "<a href=\"".url('categories/'.$this->id.'/edit')."\" class=\"btn btn-primary btn-xs\"><i class=\"far fa-edit\"></i> Edit</a>";
     }
