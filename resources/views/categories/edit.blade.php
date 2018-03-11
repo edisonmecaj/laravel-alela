@@ -6,7 +6,7 @@
 @parent
 <div class="row">
 	<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4">
-		{!! Form::model($cat) !!}
+		{!! Form::model($model) !!}
 		<div class="form-group">
 			{!! Form::label("name", "Category Name") !!}
 			{!! Form::text("name", null, ["class" => "form-control", "autocomplete" => "off"]) !!}

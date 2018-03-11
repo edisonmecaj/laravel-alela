@@ -7,6 +7,7 @@
 	{{ Html::style('vendors/bootstrap/dist/css/bootstrap.min.css') }}
 	{{ Html::style('vendors/icomoon/style.css') }}
 	{{--  {{ Html::style('vendors/font-awesome/css/font-awesome.min.css') }}  --}}
+	<link rel="shortcut icon" href="{{{ asset('images/logo.png') }}}">
 	{{ Html::style('vendors/fa5/css/fontawesome-all.min.css')}}
 	{{ Html::style('vendors/nprogress/nprogress.css') }}
 	{{ Html::style('css/alela.min.css') }}
@@ -14,7 +15,7 @@
 	{{ Html::style('css/custom.css') }}
 	<title>{{ config('app.name', 'Laravel') }} {{ isset($title) ? " | ".$title : "" }}</title>
 </head>
-<body class="nav-md" session-url="http://192.168.0.222/php/session.php/" cz-shortcut-listen="true">
+<body class="nav-md" cz-shortcut-listen="true">
 	<div class="container body">
 		<div class="main_container">
 			@guest
